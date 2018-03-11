@@ -1,0 +1,14 @@
+apply plugin : 'cpp' 
+
+model { 
+    components {
+        main(NativeExecutableSpec)   
+    }
+}
+
+sources {
+        source {
+            srcDir "src/","test/"
+            include "lib/*.cc","utils/*.cpp","utils/*.h"
+        }
+    }
